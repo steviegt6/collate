@@ -1,0 +1,51 @@
+﻿<!--
+    Copyright (C) 2023 Tomat & Contributors
+    Copyright (C) 2023 tModLoader & Contributors
+    
+    Licensed under the GNU Lesser General Public License, version 2.1; you may
+    not use this file except in compliance with the License.
+    
+    This program is distributed in the hope that it will be useful, but WITHOUT
+    ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+    FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License
+    for more details.
+
+    You should have received a copy of the GNU Lesser General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+-->
+
+<!--
+    Adapted from tModLoader/tModLoader under the MIT License:
+    https://github.com/tModLoader/tModLoader/blob/1.4/patches/TerrariaNetCore/Terraria/Terraria.csproj.patch
+-->
+<Project>
+
+    <Target Name="Collate:FilterNuGetPackages" AfterTargets="ResolveLockFileCopyLocalFiles" Condition="$(CollateRedirectReferences) == 'enable' AND $(CopyLocalLockFileAssemblies) == 'true'">
+        <ItemGroup>
+            <ReferenceCopyLocalPaths Remove="@(ReferenceCopyLocalPaths)" Condition="!$(IncludePackages.Contains('%(ReferenceCopyLocalPaths.NuGetPackageID)'))"/>
+        </ItemGroup>
+    </Target>
+
+    <Target Name="Collate:ResolveCopyLocalNuGetPackagePdbsAndXml" AfterTargets="ResolveReferences" Condition="$(CollateRedirectReferences) == 'enable' AND $(CopyLocalLockFileAssemblies) == 'true'">
+        <ItemGroup>
+            <ReferenceCopyLocalPaths Include="@(ReferenceCopyLocalPaths->'%(RootDir)%(Directory)%(Filename).pdb')" Condition="'%(ReferenceCopyLocalPaths.NuGetPackageId)' != '' and Exists('%(RootDir)%(Directory)%(Filename).pdb')"/>
+            <ReferenceCopyLocalPaths Include="@(ReferenceCopyLocalPaths->'%(RootDir)%(Directory)%(Filename).xml')" Condition="'%(ReferenceCopyLocalPaths.NuGetPackageId)' != '' and Exists('%(RootDir)%(Directory)%(Filename).xml')"/>
+        </ItemGroup>
+    </Target>
+
+    <Target Name="Collate:FilterAssemblyReferences" AfterTargets="ResolveAssemblyReferences" Condition="$(CollateRedirectReferences) == 'enable' AND $(CopyLocalLockFileAssemblies) == 'true'">
+        <ItemGroup>
+            <ReferenceCopyLocalPaths Remove="@(ReferenceCopyLocalPaths)" Condition="!$(IncludeAssemblies.Contains('%(ReferenceCopyLocalPaths.OriginalItemSpec)'))"/>
+        </ItemGroup>
+    </Target>
+
+    <Target Name="Collate:FilterProjectReferences" AfterTargets="ResolveAssemblyReferences" Condition="$(CollateRedirectReferences) == 'enable' AND $(CopyLocalLockFileAssemblies) == 'true'">
+        <ItemGroup>
+            <ReferenceCopyLocalPaths Condition="%(ReferenceCopyLocalPaths.ReferenceSourceTarget) == 'ProjectReference'">
+                <DllName>$([System.String]::Copy('%(ReferenceCopyLocalPaths.ResolvedFrom)').Remove($([System.String]::Copy('%(ReferenceCopyLocalPaths.ResolvedFrom)').IndexOf(".dll"))).SubString($([System.String]::Copy('%(ReferenceCopyLocalPaths.ResolvedFrom)').LastIndexOf("\"))).Substring(1))</DllName>
+            </ReferenceCopyLocalPaths>
+            <ReferenceCopyLocalPaths Remove="@(ReferenceCopyLocalPaths)" Condition="!$(IncludeProjects.Contains('%(ReferenceCopyLocalPaths.DllName)'))"/>
+        </ItemGroup>
+    </Target>
+
+</Project>

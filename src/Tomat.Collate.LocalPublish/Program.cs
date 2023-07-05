@@ -31,8 +31,13 @@ internal static class Program {
 
     // projects
     private const string tomat_collate = "Tomat.Collate";
-    private const string tomat_collate_nuget = "Tomat.Collate.NuGet";
     private const string tomat_collate_localpublish = "Tomat.Collate.LocalPublish";
+    private const string tomat_collate_nuget_shared = "Tomat.Collate.NuGet.Shared";
+    private const string tomat_collate_nuget = "Tomat.Collate.NuGet";
+    private const string tomat_collate_accesstransformer = "Tomat.Collate.AccessTransformer";
+    private const string tomat_collate_emptysample = "Tomat.Collate.EmptySample";
+    private const string tomat_collate_accesstransformersample = "Tomat.Collate.AccessTransformerSample";
+    private const string tomat_collate_testprojectboilerplate = "Tomat.Collate.TestProjectBoilerplate";
 
     // frameworks
     private const string netstandard20 = "netstandard2.0";
@@ -65,13 +70,17 @@ internal static class Program {
         BuildProjects(
             srcDir,
             tomat_collate,
-            tomat_collate_nuget
+            tomat_collate_nuget_shared,
+            tomat_collate_nuget,
+            tomat_collate_accesstransformer
         );
 
         PublishPackages(
             srcDir,
             nuget_repo_name,
-            tomat_collate_nuget
+            tomat_collate_nuget_shared,
+            tomat_collate_nuget,
+            tomat_collate_accesstransformer
         );
     }
 

@@ -1,0 +1,11 @@
+{
+    "plugins": {
+        "tomat.collate.accesstransformer": {
+            "assemblies": {
+                "Tomat.Collate.TestProjectBoilerplate": {
+                    "publicizeAll": true
+                }
+            }
+        }
+    }
+}

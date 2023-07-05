@@ -1,0 +1,36 @@
+<!--
+    Copyright (C) 2023 Tomat & Contributors
+    
+    Licensed under the GNU Lesser General Public License, version 2.1; you may
+    not use this file except in compliance with the License.
+    
+    This program is distributed in the hope that it will be useful, but WITHOUT
+    ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+    FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License
+    for more details.
+
+    You should have received a copy of the GNU Lesser General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+-->
+
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="../Tomat.Collate.Versions/Tomat.Collate.Versions.targets"/>
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <LangVersion>latest</LangVersion>
+        <Nullable>enable</Nullable>
+
+        <Version>$(TomatCollateAccessTransformerVersion)</Version>
+        <AssemblyVersion>$(Version)</AssemblyVersion>
+        <FileVersion>$(Version)</FileVersion>
+        <PackageVersion>$(Version)</PackageVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Tomat.Collate.NuGet" Version="$(TomatCollateNuGetVersion)" PrivateAssets="none"/>
+        <PackageReference Include="Tomat.Collate.NuGet.Shared" Version="$(TomatCollateNuGetSharedVersion)" PrivateAssets="none"/>
+    </ItemGroup>
+
+</Project>
