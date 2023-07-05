@@ -1,0 +1,78 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tomat.Collate.LocalPublish", "Tomat.Collate.LocalPublish\Tomat.Collate.LocalPublish.csproj", "{8C3E3DB4-9DCD-478B-A9E8-3CDC6681D71F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tomat.Collate", "Tomat.Collate", "{0D52F538-3394-4169-BAF5-4B00ACAD3007}"
+	ProjectSection(SolutionItems) = preProject
+		Tomat.Collate\Tomat.Collate.targets = Tomat.Collate\Tomat.Collate.targets
+		Tomat.Collate\Tomat.Collate.RedirectReferences.targets = Tomat.Collate\Tomat.Collate.RedirectReferences.targets
+		Tomat.Collate\Tomat.Collate.ErrorChecker.targets = Tomat.Collate\Tomat.Collate.ErrorChecker.targets
+		Tomat.Collate\Tomat.Collate.AssemblyRewriters.targets = Tomat.Collate\Tomat.Collate.AssemblyRewriters.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tomat.Collate.NuGet", "Tomat.Collate.NuGet\Tomat.Collate.NuGet.csproj", "{33689D84-BCEC-482B-9AA1-F69FAF9F5D21}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tomat.Collate.Versions", "Tomat.Collate.Versions", "{9D86343B-7C36-4FB6-A87C-299B6A8E2F95}"
+	ProjectSection(SolutionItems) = preProject
+		Tomat.Collate.Versions\Tomat.Collate.Versions.targets = Tomat.Collate.Versions\Tomat.Collate.Versions.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tomat.Collate.NuGet.Shared", "Tomat.Collate.NuGet.Shared\Tomat.Collate.NuGet.Shared.csproj", "{1E3E390A-113D-4B2C-9421-6E471272F37B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{4A25F0FB-81A7-441B-8132-931CCBE46373}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tomat.Collate.EmptySample", "Tomat.Collate.EmptySample\Tomat.Collate.EmptySample.csproj", "{6E4C6479-186A-4D84-8DE3-9FABC96AD42F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tomat.Collate.AccessTransformerSample", "Tomat.Collate.AccessTransformerSample\Tomat.Collate.AccessTransformerSample.csproj", "{A9E3568C-0C52-4659-9222-5C634F043057}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tomat.Collate.TestProjectBoilerplate", "Tomat.Collate.TestProjectBoilerplate\Tomat.Collate.TestProjectBoilerplate.csproj", "{3B76E977-35A9-4223-8021-7DD78C2A7E1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tomat.Collate.AccessTransformer", "Tomat.Collate.AccessTransformer\Tomat.Collate.AccessTransformer.csproj", "{57D57D14-B3D2-4155-861B-93068551DFED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8C3E3DB4-9DCD-478B-A9E8-3CDC6681D71F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C3E3DB4-9DCD-478B-A9E8-3CDC6681D71F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C3E3DB4-9DCD-478B-A9E8-3CDC6681D71F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C3E3DB4-9DCD-478B-A9E8-3CDC6681D71F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33689D84-BCEC-482B-9AA1-F69FAF9F5D21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33689D84-BCEC-482B-9AA1-F69FAF9F5D21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33689D84-BCEC-482B-9AA1-F69FAF9F5D21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33689D84-BCEC-482B-9AA1-F69FAF9F5D21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E3E390A-113D-4B2C-9421-6E471272F37B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E3E390A-113D-4B2C-9421-6E471272F37B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E3E390A-113D-4B2C-9421-6E471272F37B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E3E390A-113D-4B2C-9421-6E471272F37B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E4C6479-186A-4D84-8DE3-9FABC96AD42F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E4C6479-186A-4D84-8DE3-9FABC96AD42F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E4C6479-186A-4D84-8DE3-9FABC96AD42F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E4C6479-186A-4D84-8DE3-9FABC96AD42F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9E3568C-0C52-4659-9222-5C634F043057}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9E3568C-0C52-4659-9222-5C634F043057}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9E3568C-0C52-4659-9222-5C634F043057}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9E3568C-0C52-4659-9222-5C634F043057}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B76E977-35A9-4223-8021-7DD78C2A7E1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B76E977-35A9-4223-8021-7DD78C2A7E1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B76E977-35A9-4223-8021-7DD78C2A7E1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B76E977-35A9-4223-8021-7DD78C2A7E1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57D57D14-B3D2-4155-861B-93068551DFED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57D57D14-B3D2-4155-861B-93068551DFED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57D57D14-B3D2-4155-861B-93068551DFED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57D57D14-B3D2-4155-861B-93068551DFED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6E4C6479-186A-4D84-8DE3-9FABC96AD42F} = {4A25F0FB-81A7-441B-8132-931CCBE46373}
+		{A9E3568C-0C52-4659-9222-5C634F043057} = {4A25F0FB-81A7-441B-8132-931CCBE46373}
+		{3B76E977-35A9-4223-8021-7DD78C2A7E1C} = {4A25F0FB-81A7-441B-8132-931CCBE46373}
+	EndGlobalSection
+EndGlobal
